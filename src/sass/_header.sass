@@ -1,0 +1,30 @@
+nav
+	+flex-pack (center, center, false, 100%)
+	padding-top: 45px
+
+.logo
+	+flex
+	flex-basis: 25%
+	&_leaf
+		& img
+			width: 55px
+			height: 62px
+
+.logo_text
+	text-align: center
+	font-size: 1.1em
+	color: #8EBC5A
+	letter-spacing: 2px
+	& img
+		width: 85%
+
+
+nav > ul
+	+flex-pack(space-between, false, wrap, 45%)
+	list-style: none
+
+nav a
+	font-size: 15px
+	text-decoration: none
+	font-weight: 100
+
