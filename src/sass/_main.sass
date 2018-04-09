@@ -1,3 +1,5 @@
+$mgint: 40px
+
 
 .content
 	width: 100%
@@ -31,6 +33,11 @@
 	+flex
 	justify-content: center
 	max-width: 1023px
+	+r(875)
+		max-width: 450px
+		padding: 0
+	+r(480)
+		max-width: 300px
 
 .counter
 	+flex
@@ -44,27 +51,55 @@
 	padding: 25px 70px
 	border: 1px solid #90D23D
 	border-radius: 15px
+	+r(875)
+		padding: 25px 0
 
 #time
 	display: block
-	width: 658px
-	font-size: 7em
+	width: 100%
+	padding: 0 20px
+	font-size: 8em
+	+r(1085)
+		max-width: 85%
+		margin: 0 auto
+		font-size: 5em
+	+r(875)
+		font-size: 4em
+		max-width: 100%
+	+r(510)
+		width: 80%
+		font-size: 3em
+	+r(480)
+		width: 90%
+		font-size: 2.3em
 
 #tips
 	+flex
 	width: 100%
 	justify-content: space-between
-	padding: 0 135px 
+	padding: 0 80px 
 	text-align: center
 	font-size: 1.5em
-	+r(1630)
-		padding: 0 125px
+	+r(1085)
+		padding: 0
+		font-size: 1.2em
+		max-width: 65%
+		margin: 0 auto
+	+r(875)
+		max-width: 83%
+	+r(510)
+		font-size: 1em
+		max-width: 65%
+	+r(480)
+		font-size: 0.8em
+		max-width: 75%
+
 
 #tips span:nth-child(1)
-	margin-left: 25px
+	margin-left: 5px
 
 #tips span:nth-child(2)
-	margin-left: 19px
+	margin-left: 10px
 
 .images
 	+flex
@@ -72,11 +107,20 @@
 	align-self: flex-start
 	margin-top: 4em
 	flex-basis: 82%
-	transform: skew(0deg, -9deg) translateY(25px)
+	transform: skew(0, -9deg) translateY(25px)
+	+r(1280)
+		transform: skew(0, -9deg) translateY(10px)
+	+r(1000)
+		margin-top: 3.8em
+		transform: skew(0, -8deg) translate(2%, 10%)
 
 .images img
 	width: 12%
 	height: 12%
+	+r(1000)
+		width: 22%
+		height: 22%
+
 
 .images img:nth-child(1)
 	transform: translate(50%)
@@ -112,12 +156,23 @@
 	justify-content: space-around
 	align-items: flex-end
 	transform: translateY(-30%)
+	+r(1280)
+		padding-top: 150px
+	+r(1000)
+		flex-basis: 100%
+		flex-wrap: wrap
+		transform: translateY(0)
+		padding-top: 75px
+		text-align: center
 
 .welcome
 	display: flex
 	flex-wrap: wrap
 	flex-basis: 45%
 	align-self: flex-end
+	+r(1000)
+		flex-basis: 100%
+		margin-bottom: $mgint 
 
 .welcome h2
 	flex-basis: 100%
@@ -136,6 +191,10 @@
 	justify-content: space-around
 	box-shadow: 2px 2px 2px 2px #72706F
 	background: #fff
+	+r(1000)
+		flex-basis: 100%
+		margin-bottom: $mgint
+
 
 .sign h2
 	margin: 2em 0
@@ -166,15 +225,25 @@
 	+flex
 	flex-basis: 75%
 	justify-content: space-between
+	+r(768)
+		flex-direction: column
 
 .shots
 	flex-basis: 30%
 	text-align: center
+	+r(768)
+		margin-bottom: $mgint
 	&_img-wrap
 			display: inline-block
-			width: 50%
-			max-width: 50%
-			max-height: 50%
+			width: 210px
+			height: 210px
+			margin: 0 auto
+			background-size: cover
+			background-repeat: no-repeat
+			background-position: 0 50%
+			+r(1000)
+				width: 155px
+				height: 155px
 
 .shots img
 	display: block
@@ -184,6 +253,8 @@
 	padding: 45px 0 25px
 	font-size: 35px
 	line-height: 1
+	+r(1000)
+		font-size: 2em
 
 //.describe-content > .shots:nth-child(2) > h2
 	//margin-right: 1.2em
@@ -203,6 +274,13 @@
 	color: #fff
 	margin-top: 5em
 	text-align: center
+	+r(1000)
+		flex-basis: 90%
+	+r(768)
+		flex-basis: 100%
+		font-size: 0.8em
+	+r(536)
+		font-size: 0.8em
 
 .events ul > li:first-child
 	background: #A3CC40
@@ -216,27 +294,24 @@
 	color: #000
 
 .sheldue
-	display: -webkit-flex
-	display: -moz-flex
-	display: -ms-flex
-	display: -o-flex
-	display: -ms-flexbox
+	+flex
 	flex-wrap: wrap
 	width: 30%
-	flex: 1
+	+r(536)
+		width: 25%
 
 .sheldue li
-	display: -webkit-flex
-	display: -moz-flex
-	display: -ms-flex
-	display: -o-flex
-	display: flex
-	display: -ms-flexbox
+	+flex
 	flex-basis: 100%
 	min-width: 0
 	align-items: center
 	padding-left: 50px
 	height: 20%
+	+r(536)
+		padding-left: 10px
+	+r(430)
+		padding-right: 5px
+		padding-left: 10px
 
 .sheldue li:first-child
 	border-radius: 10px 0 0 0
@@ -247,20 +322,22 @@
 	border: 1px solid #4B4D4F
 
 .stuff
-	display: -webkit-flex
-	display: -moz-flex
-	display: -ms-flexbox
-	display: -o-flex
+	+flex
 	flex-wrap: wrap
 	width: 70%
+	+r(536)
+		width: 75%
 
 .stuff li
-	display: -ms-flexbox
-	display: flex
+	+flex
 	flex-basis: 100%
 	justify-content: space-between
 	align-items: center
 	height: 20%
+
+.stuff p
+	+r(536)
+		width: 80%
 
 .stuff li:first-child
 	border-radius: 0 10px 0 0
@@ -271,8 +348,15 @@
 	border: 1px solid #4B4D4F
 
 .stuff li img
-	width: 4%
+	width: 20%
 	margin: 1em 3em
+	cursor: pointer
+	+r(536)
+		width: 15px
+		margin: 1em 1.5em
+	+r(430)
+		width: 10px
+		margin: 1em 1em
 
 /* ------------------ELITE PART!----------------*/
 
@@ -295,26 +379,45 @@
 
 .orient-right
 	justify-content: flex-end
+	+r(1078)
+		flex-basis: 85%
 .elite
 	padding: 130px 0 170px
 	text-align: right
+	+r(768)
+		margin-top: 120px
+	+r(536)
+		margin-top: 100px
 	& button 
 		margin-top: 40px
 	&_logo
 		position: absolute
 		top: -240px
 		left: 0
+		+r(1078)
+			width: 300px
+			height: 300px
+		+r(768)
+			width: 250px
+			height: 250px
+			left: -20px
+		+r(536)
+			width: 220px
+			top: -220px
+		& img
+			display: block
+			width: 100%
 
 .reward
-	display: -webkit-flex
-	display: -moz-flex
-	display: -ms-flexbox
-	display: -o-flex
-	display: flex
+	+flex
 	flex-basis: 70%
 	flex-flow: column nowrap
 	justify-content: center
 	text-align: right
+	+r(536)
+		flex-basis: 100%
+		text-align: center
+		
 
 .reward h2
 	font-size: 3em
@@ -325,37 +428,55 @@
 
 
 
-/* ------------------ELITE PART!----------------*/
+/* ------------------ELITE PART END----------------*/
 
 .table-bar
 	flex-direction: column
+	+r(946)
+		flex-basis: 90% 
 
 .speakers
 	width: 40%
 	margin-right: auto
+	+r(768)
+		width: 100%
+		text-align: center
+		
+
 
 .shuvo
-	display: -webkit-flex
-	display: -moz-flex
-	display: -ms-flexbox
-	display: -o-flex
-	display: flex
+	+flex
 	justify-content: space-between
 	flex-wrap: wrap
+	height: 150vh
+	+r(1360)
+		height: 130vh
+	+r(945)
+		height: 110vh
+		padding-bottom: 100px
+	+r(768)
+		height: 1500px
 
 .bars
 	flex-basis: 30%
 	background: #80B562
-	height: 24em
+	height: 30%
+	max-height: 30%
 	margin: 1.5em 0
 	border-radius: 10px
+	+r(1168)
+		height: 25%
+	+r(946)
+		height: 30%
+	+r(768)
+		flex-basis: 48%
+		height: 250px
+	+r(480)
+		flex-basis: 100%
+		height: 100px
 
 .shahriyer
-	display: -webkit-flex
-	display: -moz-flex
-	display: -ms-flexbox
-	display: -o-flex
-	display: flex
+	+flex
 	color: #fff
 	background-image: url(../img/background.png)
 	justify-content: center
@@ -365,11 +486,7 @@
 
 .shuvo-inner
 	flex-basis: 80%
-	display: -webkit-flex
-	display: -moz-flex
-	display: -ms-flexbox
-	display: -o-flex
-	display: flex
+	+flex
 	flex-direction: column
 
 .shuvo-inner hr
@@ -391,34 +508,43 @@
 	flex-basis: 100%
 	line-height: 1em
 	flex: 0 0 auto
+	+r(1360)
+		font-size: 2em
+	+r(946)
+		font-size: 1.4em
+
 
 .shuvo-inner > ul
-	display: -webkit-flex
-	display: -moz-flex
-	display: -ms-flexbox
-	display: -o-flex
-	display: flex
+	+flex
 	width: 60%
 	justify-content: space-between
 	align-items: flex-end
 	margin-top: 7em
+	+r(1360)
+		width: 70%
+		margin-top: 3.5em
+	+r(1150)
+		width: 100%
+	+r(946)
+		margin-top: 3em
+	& a
+		+r(945)
+			width: 26px
+			height: 26px
+	& img
+		display: block
+		width: 100%
+		cursor: pointer
+		
 
 .stars
 	background: #fff
-	display: -webkit-flex
-	display: -moz-flex
-	display: -ms-flexbox
-	display: -o-flex
-	display: flex
+	+flex
 	justify-content: center
 	align-items: center
 
 .sponsor
-	display: -webkit-flex
-	display: -moz-flex
-	display: -ms-flex
-	display: -o-flex
-	display: flex
+	+flex
 	flex-basis: 50%
 	flex-wrap: wrap
 	justify-content: center
@@ -428,6 +554,7 @@
 .sponsor h2
 	font-size: 2.7em
 	margin: 2em 0 0.7em
+
 
 .sponsor p:nth-of-type(2)
 	flex-basis: 100%
