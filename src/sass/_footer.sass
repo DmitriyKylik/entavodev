@@ -1,1 +1,44 @@
-_footer.sass
+footer
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flexbox
+	display: -o-flex
+	display: flex
+	justify-content: center
+	background: #90D23D
+	color: #fff
+
+.social
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flexbox
+	display: -o-flex
+	display: flex
+	justify-content: center
+	flex-wrap: wrap
+	flex-basis: 25%
+	margin: 3em 0
+	text-align: center
+	+r(1280)
+		flex-basis: 50%
+	+r(600)
+		flex-basis: 100%
+		padding: 0 20px
+
+.social ul
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flexbox
+	display: -o-flex
+	display: flex
+	flex-basis: 50%
+	flex-wrap: wrap
+	justify-content: space-between
+	text-align: center
+	margin-bottom: 1em
+
+.social ul > li
+	flex-basis: 15%
+
+.social ul > li > img
+	width: 100%
