@@ -8,9 +8,22 @@ title: Index page
 	<div class="wrapper">
 		<section class="content darker">
 			<div class="container">
-
-				{% include "partials/_header.html" %}
-
+				<nav>
+				 <div class="logo">
+					 <div class="logo_leaf"><img src="img/Logo.png" alt="error"></div>
+					 <div class="logo_text">
+						 <img src="img/entavo-logo.png" alt="error">
+						 <p>BANGLADESH</p>
+					 </div>
+				 </div>
+					<ul>
+						<li><a href="#">EVENT DETAILS</a></li>
+						<li><a href="#">SPEAKERS</a></li>
+						<li><a href="#">SPONSORS</a></li>
+						<li><a href="#">PAST EVENTS</a></li>
+						<li><a href="#">CONTACTS</a></li>
+					</ul>
+				</nav>
 				<div class="count-wrap">
 					<div class="counter">
 						<div id="time"></div>
@@ -112,7 +125,7 @@ title: Index page
 					<div class="shuvo-inner">
 						<h2>Shahriyer<br>Shuvo</h2>
 						<hr/>
-						<p>More about selling in the  Entavo Marketplaces</p>
+						<p>More about selling in the <br> Entavo Marketplaces</p>
 						<ul>
 							<li><a href="#"><img src="img/fb.png" alt="error"></a></li>
 							<li><a href="#"><img src="img/twitter.png" alt="error"></a></li>
@@ -123,7 +136,7 @@ title: Index page
 				</div>
 				<div class="bars"></div>
 				<div class="bars"></div>
-				<div class="bars stars" style = "background-image: url(img/Stars.png)"></div>
+				<div class="bars stars"><img src="img/Stars.png" alt=""></div>
 				<div class="bars"></div>
 				<div class="bars"></div>
 				<div class="bars"></div>
@@ -164,7 +177,7 @@ title: Index page
 				<div class="map-view">
 					<img src="img/player.png" alt="error">
 					<p>Lorem ipsum dolor sit amet, consectetur <br> adipisicing elit. Unde suscipit quas<br>quidem tempore neque, earum odit voluptatem porro.</p>
-					<button class="btn btn-map">View Map</button>
+					<button class="btn">View Map</button>
 				</div>
 				<form action="" class="send-message">
 					<input type="email" name="mail" placeholder="ingencustartist@gmail.com" />
@@ -173,9 +186,19 @@ title: Index page
 				</form>
 			</div>
 	</section>
-
-	{% include "partials/_footer.html" %}
-	
+	<footer>
+		<div class="social">
+			<ul>
+				<li><img src="img/fb.png" alt="error"></li>
+				<li><img src="img/twitter.png" alt="error"></li>
+				<li><img src="img/in.png" alt="error"></li>
+				<li><img src="img/google-plus.png" alt="error"></li>
+				<li><img src="img/tumblr.png" alt="error"></li>
+			</ul>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br/> Ex nesciunt ab reprehenderit, nam, sint necessitatibus.</p>
+			<span></span>
+		</div>
+	</footer>
 	</div>
 
 {% endblock %}

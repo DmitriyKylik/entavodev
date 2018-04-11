@@ -1,4 +1,4 @@
-import 'jquery';
+/*import './lib/jquery-3.2.1.min.js';*/
 import './lib/jquery.countdown.js';
 
 $(function() {

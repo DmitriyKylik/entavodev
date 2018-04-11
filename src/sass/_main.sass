@@ -113,8 +113,6 @@ $mgint: 40px
 	+r(1000)
 		margin-top: 3.8em
 		transform: skew(0, -8deg) translate(2%, 10%)
-	+r(555)
-		flex-basis: 100%
 
 .images img
 	width: 12%
@@ -122,9 +120,6 @@ $mgint: 40px
 	+r(1000)
 		width: 22%
 		height: 22%
-	+r(555)
-		width: 120px
-		height: 100px
 
 
 .images img:nth-child(1)
@@ -230,13 +225,13 @@ $mgint: 40px
 	+flex
 	flex-basis: 75%
 	justify-content: space-between
-	+r(769)
+	+r(768)
 		flex-direction: column
 
 .shots
 	flex-basis: 30%
 	text-align: center
-	+r(769)
+	+r(768)
 		margin-bottom: $mgint
 	&_img-wrap
 			display: inline-block
@@ -261,6 +256,9 @@ $mgint: 40px
 	+r(1000)
 		font-size: 2em
 
+//.describe-content > .shots:nth-child(2) > h2
+	//margin-right: 1.2em
+
 .shots p
 	text-align: center
 	width: 100%
@@ -278,7 +276,7 @@ $mgint: 40px
 	text-align: center
 	+r(1000)
 		flex-basis: 90%
-	+r(769)
+	+r(768)
 		flex-basis: 100%
 		font-size: 0.8em
 	+r(536)
@@ -360,7 +358,7 @@ $mgint: 40px
 		width: 10px
 		margin: 1em 1em
 
-// ------------------ELITE PART!----------------
+/* ------------------ELITE PART!----------------*/
 
 .block
 	margin-top: 11%
@@ -386,7 +384,7 @@ $mgint: 40px
 .elite
 	padding: 130px 0 170px
 	text-align: right
-	+r(769)
+	+r(768)
 		margin-top: 120px
 	+r(536)
 		margin-top: 100px
@@ -399,14 +397,13 @@ $mgint: 40px
 		+r(1078)
 			width: 300px
 			height: 300px
-		+r(769)
+		+r(768)
 			width: 250px
 			height: 250px
 			left: -20px
 		+r(536)
 			width: 220px
 			top: -220px
-			+center(h)
 		& img
 			display: block
 			width: 100%
@@ -420,6 +417,7 @@ $mgint: 40px
 	+r(536)
 		flex-basis: 100%
 		text-align: center
+		
 
 .reward h2
 	font-size: 3em
@@ -428,52 +426,62 @@ $mgint: 40px
 .reward br
 	margin: 0.5em 0
 
-// ------------------ELITE PART END----------------
 
-// ------------------TABLE PART!----------------
+
+/* ------------------ELITE PART END----------------*/
 
 .table-bar
-	flex-wrap: wrap
-	padding: 0 30px
+	flex-direction: column
+	+r(946)
+		flex-basis: 90% 
 
 .speakers
 	width: 40%
 	margin-right: auto
-	+r(769)
+	+r(768)
 		width: 100%
 		text-align: center
+		
+
 
 .shuvo
 	+flex
-	flex-basis: 100%
 	justify-content: space-between
 	flex-wrap: wrap
-	align-self: center
-	+r(550)
-		flex-direction: column
-		align-items: center
+	height: 150vh
+	+r(1360)
+		height: 130vh
+	+r(945)
+		height: 110vh
+		padding-bottom: 100px
+	+r(768)
+		height: 1500px
 
 .bars
-	width: 31%
-	height: 350px
+	flex-basis: 30%
 	background: #80B562
-	margin: 0.5em 0
+	height: 30%
+	max-height: 30%
+	margin: 1.5em 0
 	border-radius: 10px
-	display: inline-block
-	
-	+r(1281)
-		height: 275px
-	+r(769)
-		width: 48%
-		height: 150px
+	+r(1168)
+		height: 25%
+	+r(946)
+		height: 30%
+	+r(768)
+		flex-basis: 48%
+		height: 250px
 	+r(480)
-		width: 100%
+		flex-basis: 100%
+		height: 100px
 
 .shahriyer
 	+flex
 	color: #fff
 	background-image: url(../img/background.png)
 	justify-content: center
+	-ms-justify-content: center
+	-ms-align-items: center
 	align-items: center
 
 .shuvo-inner
@@ -488,20 +496,12 @@ $mgint: 40px
 	background: #fff
 	border: none
 	flex: 0 0 auto
-	+r(769)
-		margin: 0.5em 0
-	+r(550)
-		height: 0.2em
 
 .shuvo-inner p
 	flex-basis: 100%
 	line-height: 1.5em
 	align-self: flex-start
 	flex: 0 0 auto
-	+r(769)
-		font-size: 0.9em
-	+r(550)
-		font-size: 0.8em
 
 .shuvo-inner h2
 	font-size: 3.0em
@@ -512,17 +512,14 @@ $mgint: 40px
 		font-size: 2em
 	+r(946)
 		font-size: 1.4em
-	+r(769)
-		font-size: 1.2em
-	+r(550)
-		font-size: 1em
+
 
 .shuvo-inner > ul
 	+flex
 	width: 60%
 	justify-content: space-between
 	align-items: flex-end
-	margin-top: 5.5em
+	margin-top: 7em
 	+r(1360)
 		width: 70%
 		margin-top: 3.5em
@@ -530,42 +527,21 @@ $mgint: 40px
 		width: 100%
 	+r(946)
 		margin-top: 3em
-	+r(769)
-		margin-top: 0.5em
 	& a
-		height: 100%
 		+r(945)
 			width: 26px
 			height: 26px
-		+r(769)
-			width: 9px	
-			height: 9px
 	& img
 		display: block
 		width: 100%
-		max-width: 100%
-		height: auto
 		cursor: pointer
-		+r(769)
-			width: 22px	
-			height: 22px
-		+r(550)
-			width: 16px
-			height: 16px
+		
 
 .stars
 	background: #fff
 	+flex
 	justify-content: center
 	align-items: center
-	background-size: contain
-	background-position: center
-	background-repeat: no-repeat
-
-// ------------------TABLE PART END----------------
-
-
-// ------------------SPONSOR PART!----------------
 
 .sponsor
 	+flex
@@ -574,14 +550,11 @@ $mgint: 40px
 	justify-content: center
 	text-align: center
 	align-items: center
-	+r(1281)
-		flex-basis: 70%
-	+r(769)
-		flex-basis: 75%
 
 .sponsor h2
 	font-size: 2.7em
 	margin: 2em 0 0.7em
+
 
 .sponsor p:nth-of-type(2)
 	flex-basis: 100%
@@ -589,35 +562,17 @@ $mgint: 40px
 
 .logotips
 	+flex-pack(space-between, center, false, 100%)
-	+r(480)
-		justify-content: center
-		flex-wrap: wrap
 	& .icon
 		font-size: 28px
 		fill: #82b541
-		+r(480)
-			display: block
-			width: 100%
-	& img
-		+r(769)
-			width: 30%
-			margin-right: 15px
-		+r(480)
-			display: block
-			width: 65%
-			margin-bottom: 20px
 
-// ------------------SPONSOR PART END----------------
-
- // ------------------COLOR-BLOCKS PART!----------------
+.sponsor button
+	margin: 4em 0
 
 .windows
 	flex-basis: 80%
 	flex-wrap: wrap
 	text-align: left
-	+r(480)
-		text-align: center
-		
 
 .windows h2
 	flex-basis: 100%
@@ -628,9 +583,7 @@ $mgint: 40px
 	flex-basis: 100%
 
 .top
-	flex-basis: 100%
-	+r(769)
-		text-align: center
+	flex-basis: 85%
 
 .color-blocks
 	display: -webkit-flex
@@ -642,12 +595,13 @@ $mgint: 40px
 	flex-basis: 100%
 	margin-top: 7em
 
-
 .color-blocks div:first-child, .color-blocks div:last-child
 	flex-basis: 53%
+	height: 23em
 
 .color-blocks div:nth-child(2), .color-blocks div:nth-child(3)
 	flex-basis: 47%
+	height: 23em
 
 .color-blocks div:nth-child(1)
 	background: #3D6ED2
@@ -661,27 +615,14 @@ $mgint: 40px
 .color-blocks div:nth-child(4)
 	background: #E0652A
 
-.color-blocks div
-	height: 23em
-	+r(1280)
-		height: 20em
-	+r(769)
-		height: 15em
-	+r(480)
-		height: 10em
-
- // ------------------COLOR-BLOCKS PART END----------------
-
- // ------------------MAP PART!----------------
-
 .more
 	background: #373737
 	color: #fff
 	flex-basis: 10%
-	margin-tot: 7em
+	margin-top: 7em
 
 .map
-	margin-tot: 0
+	margin-top: 0
 	position: relative
 	background-image: url(../img/map.png)
 
@@ -698,28 +639,30 @@ $mgint: 40px
 	z-index: 2
 
 .map-form
-	+flex
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flexbox
+	display: -o-flex
+	display: flex
 	flex-basis: 75%
 	flex-wrap: nowrap
 	background: #fff
 	margin: 2em 0
 	justify-content: space-around
 	z-index: 3
-	+r(600)
-		flex-wrap: wrap
 
 .map-view
-	+flex
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flexbox
+	display: -o-flex
+	display: flex
 	flex-basis: 25%
 	justify-content: center
 	flex-wrap: wrap
 	text-align: center
 	align-items: center
 	margin: 7em 0
-	+r(1280)
-		flex-basis: 40%
-	+r(600)
-		flex-basis: 100%
 
 .map-view img
 	width: 35%
@@ -744,10 +687,6 @@ $mgint: 40px
 	margin: 3em 0
 	align-items: space-around
 	justify-content: center
-	+r(1280)
-		flex-basis: 40%
-	+r(600)
-		flex-basis: 90%
 
 .send-message input[type=email]
 	flex-basis: 100%
@@ -775,43 +714,41 @@ $mgint: 40px
 	color: #fff
 	background: #373737
 
- // ------------------MAP PART END----------------
+footer
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flexbox
+	display: -o-flex
+	display: flex
+	justify-content: center
+	background: #90D23D
+	color: #fff
 
-// footer
-// 	display: -webkit-flex
-// 	display: -moz-flex
-// 	display: -ms-flexbox
-// 	display: -o-flex
-// 	display: flex
-// 	justify-content: center
-// 	background: #90D23D
-// 	color: #fff
+.social
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flexbox
+	display: -o-flex
+	display: flex
+	justify-content: center
+	flex-wrap: wrap
+	flex-basis: 25%
+	margin: 3em 0
 
-// .social
-// 	display: -webkit-flex
-// 	display: -moz-flex
-// 	display: -ms-flexbox
-// 	display: -o-flex
-// 	display: flex
-// 	justify-content: center
-// 	flex-wrap: wrap
-// 	flex-basis: 25%
-// 	margin: 3em 0
+.social ul
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flexbox
+	display: -o-flex
+	display: flex
+	flex-basis: 50%
+	flex-wrap: wrap
+	justify-content: space-between
+	text-align: center
+	margin-bottom: 1em
 
-// .social ul
-// 	display: -webkit-flex
-// 	display: -moz-flex
-// 	display: -ms-flexbox
-// 	display: -o-flex
-// 	display: flex
-// 	flex-basis: 50%
-// 	flex-wrap: wrap
-// 	justify-content: space-between
-// 	text-align: center
-// 	margin-bottom: 1em
+.social ul > li
+	flex-basis: 15%
 
-// .social ul > li
-// 	flex-basis: 15%
-
-// .social ul > li > img
-// 	width: 100%
+.social ul > li > img
+	width: 100%
