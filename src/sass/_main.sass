@@ -30,8 +30,6 @@ $mgint: 40px
 	color: black
 
 .count-wrap
-	+flex
-	justify-content: center
 	max-width: 1023px
 	+r(875)
 		max-width: 450px
@@ -40,12 +38,7 @@ $mgint: 40px
 		max-width: 300px
 
 .counter
-	+flex
 	flex-basis: 100%
-	flex-wrap: wrap
-	box-sizing: border-box
-	justify-content: center
-	align-items: center
 	text-align: center
 	margin: 5em 0 5em
 	padding: 25px 70px
@@ -70,8 +63,9 @@ $mgint: 40px
 		width: 80%
 		font-size: 3em
 	+r(480)
-		width: 90%
-		font-size: 2.3em
+		width: 100%
+		font-size: 1.7em
+		padding: 0 20px
 
 #tips
 	+flex
@@ -92,14 +86,18 @@ $mgint: 40px
 		max-width: 65%
 	+r(480)
 		font-size: 0.8em
-		max-width: 75%
+		max-width: 86%
 
 
 #tips span:nth-child(1)
-	margin-left: 5px
+	margin-left: 8px
+	+r(480)
+		margin-left: 10px
 
 #tips span:nth-child(2)
 	margin-left: 10px
+	+r(480)
+		margin-left: 3px
 
 .images
 	+flex
@@ -123,8 +121,7 @@ $mgint: 40px
 		width: 22%
 		height: 22%
 	+r(555)
-		width: 120px
-		height: 100px
+		height: 70px
 
 
 .images img:nth-child(1)
@@ -231,10 +228,12 @@ $mgint: 40px
 	flex-basis: 75%
 	justify-content: space-between
 	+r(769)
+		display: block // Для коректного отображения в IE 11
 		flex-direction: column
 
 .shots
 	flex-basis: 30%
+
 	text-align: center
 	+r(769)
 		margin-bottom: $mgint
@@ -269,6 +268,7 @@ $mgint: 40px
 	font-weight: 300
 
 .events
+	height: 600px // Задана явная высота по причине того, что в IE 11 был баг, который не отрисовывал высоту корректно
 	display: flex
 	flex-basis: 72%
 	justify-content: center
@@ -288,7 +288,6 @@ $mgint: 40px
 	background: #A3CC40
 
 .events h3
-	margin: 0.8em 0
 	font-size: 1.5em
 
 .events > p
@@ -297,15 +296,12 @@ $mgint: 40px
 
 .sheldue
 	+flex
-	flex-wrap: wrap
-	width: 30%
-	+r(536)
-		width: 25%
+	flex-direction: column
+	flex-basis: 30%
 
 .sheldue li
 	+flex
 	flex-basis: 100%
-	min-width: 0
 	align-items: center
 	padding-left: 50px
 	height: 20%
@@ -325,17 +321,15 @@ $mgint: 40px
 
 .stuff
 	+flex
-	flex-wrap: wrap
-	width: 70%
-	+r(536)
-		width: 75%
+	flex-direction: column
+	flex-basis: 70%
 
 .stuff li
 	+flex
 	flex-basis: 100%
 	justify-content: space-between
 	align-items: center
-	height: 20%
+	// height: 20%
 
 .stuff p
 	+r(536)
@@ -364,11 +358,6 @@ $mgint: 40px
 
 .block
 	margin-top: 11%
-	display: -webkit-flex
-	display: -moz-flex
-	display: -ms-flexbox
-	display: -o-flex
-	display: flex
 	justify-content: center
 
 .center
@@ -381,6 +370,7 @@ $mgint: 40px
 
 .orient-right
 	justify-content: flex-end
+	padding: 0 50px
 	+r(1078)
 		flex-basis: 85%
 .elite
@@ -478,11 +468,13 @@ $mgint: 40px
 
 .shuvo-inner
 	flex-basis: 80%
-	+flex
+	display: block
 	flex-direction: column
+	text-align: left
 
 .shuvo-inner hr
 	height: 0.5em
+	display: inline-block
 	width: 30%
 	margin: 1em 0
 	background: #fff
@@ -495,6 +487,8 @@ $mgint: 40px
 
 .shuvo-inner p
 	flex-basis: 100%
+	width: 100%  // Высота и ширина заданы для того, чтобы в IE текст не вылазил за переделы родителя
+	height: 100%
 	line-height: 1.5em
 	align-self: flex-start
 	flex: 0 0 auto
@@ -580,6 +574,7 @@ $mgint: 40px
 		flex-basis: 75%
 
 .sponsor h2
+	flex-basis: 100%
 	font-size: 2.7em
 	margin: 2em 0 0.7em
 
@@ -588,7 +583,7 @@ $mgint: 40px
 	margin: 1em 0 3em
 
 .logotips
-	+flex-pack(space-between, center, false, 100%)
+	+flex-pack(space-around, center, false, 100%)
 	+r(480)
 		justify-content: center
 		flex-wrap: wrap
@@ -612,12 +607,10 @@ $mgint: 40px
  // ------------------COLOR-BLOCKS PART!----------------
 
 .windows
-	flex-basis: 80%
 	flex-wrap: wrap
 	text-align: left
 	+r(480)
 		text-align: center
-		
 
 .windows h2
 	flex-basis: 100%
@@ -628,18 +621,14 @@ $mgint: 40px
 	flex-basis: 100%
 
 .top
-	flex-basis: 100%
+	flex-basis: 90%
 	+r(769)
 		text-align: center
 
 .color-blocks
-	display: -webkit-flex
-	display: -moz-flex
-	display: -ms-flexbox
-	display: -o-flex
-	display: flex
+	+flex
 	flex-wrap: wrap
-	flex-basis: 100%
+	flex-basis: 90%
 	margin-top: 7em
 
 
@@ -674,14 +663,15 @@ $mgint: 40px
 
  // ------------------MAP PART!----------------
 
-.more
-	background: #373737
-	color: #fff
-	flex-basis: 10%
-	margin-tot: 7em
+// .more
+// 	background: #373737
+// 	color: #fff
+// 	flex-basis: 10%
+// 	margin-top: 7em
 
 .map
-	margin-tot: 0
+	margin-top: 0
+	padding: 20px 0 
 	position: relative
 	background-image: url(../img/map.png)
 
@@ -699,13 +689,15 @@ $mgint: 40px
 
 .map-form
 	+flex
-	flex-basis: 75%
-	flex-wrap: nowrap
+	width: 75%
+	margin: 0 auto
+	position: relative
 	background: #fff
-	margin: 2em 0
+	flex-wrap: nowrap
 	justify-content: space-around
-	z-index: 3
+	z-index: 50
 	+r(600)
+		width: 90%
 		flex-wrap: wrap
 
 .map-view
@@ -734,11 +726,7 @@ $mgint: 40px
 	background: #90D23D
 
 .send-message
-	display: -webkit-flex
-	display: -moz-flex
-	display: -ms-flexbox
-	display: -o-flex
-	display: flex
+	+flex
 	flex-basis: 25%
 	flex-wrap: wrap
 	margin: 3em 0
@@ -756,6 +744,8 @@ $mgint: 40px
 	font-size: 0.9em
 	border-radius: 5px
 	border: 1px solid #A1D95B
+	+placeholder
+		padding: 5px
 
 .send-message textarea
 	flex-basis: 100%
